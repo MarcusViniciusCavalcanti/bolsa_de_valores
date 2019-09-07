@@ -25,13 +25,6 @@ class NegociacaoController {
       .map((elemento, indice) => elemento - indice % 2)
     )
 
-    const diaMesAno = DataConverso.pataTexto(data)
-
-    console.log(diaMesAno)
-
     return new Negociacao(data, valor, quantidade)
   }
 }
-
-
-

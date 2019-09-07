@@ -1,8 +1,20 @@
 
   class DataConverso {
 
-    static pataTexto(data) {
-      return `${data.getDay()}/${data.getMonth() + 1}/${data.getFullYear()}`
+    constructor() {
+      throw new Error('Esta classe não pode se instanciada')
+    }
+
+    //.. métodos estáticos omitidos
+
+
+
+    static paraTexto(data) {
+      if (data instanceof Date) {
+        return `${data.getDate()}/${data.getMonth() + 1}/${data.getFullYear()}`
+      }
+
+      throw new Error('Data inválida')
     }
 
     static paraData(texto) {
